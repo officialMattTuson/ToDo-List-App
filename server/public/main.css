@@ -1,4 +1,47 @@
 body {
   background-color: blanchedalmond;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+}
+
+.btn {
+  font-family: monospace;
+  margin: auto;
+  width: 20%;
+  border-width: 0px;
+  background-color: aquamarine;
+  padding: 10px;
+
+}
+
+ul {
+  position: relative;
+  top: 50px;
+}
+p {
+  list-style: none;
+  border-style: dotted;
+  width: 40%;
+  padding: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  text-decoration: none;
+}
+
+p:hover{
+  background-color: rgb(180, 44, 39);
+  font-weight: bold;
+  color: white;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  color: white;
+  padding: 20px;
+
 }
