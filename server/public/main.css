@@ -4,13 +4,29 @@ body {
   text-align: center;
 }
 
-.btn {
+.btnOn {
   font-family: monospace;
   margin: auto;
   width: 20%;
   border-width: 0px;
-  background-color: aquamarine;
+  background-color: rgb(93, 185, 93);
   padding: 10px;
+  box-shadow: 0 5px 20px 0 green;
+  font-weight: bold;
+  cursor: pointer;
+  
+}
+
+.btnClose {
+  font-family: monospace;
+  margin: auto;
+  width: 20%;
+  border-width: 0px;
+  background-color: rgb(236, 114, 114);
+  padding: 10px;
+  box-shadow: 0 5px 20px 0 red;
+  font-weight: bold;
+  cursor: pointer;
 
 }
 
@@ -18,30 +34,43 @@ ul {
   position: relative;
   top: 50px;
 }
-p {
-  list-style: none;
-  border-style: dotted;
-  width: 40%;
-  padding: 10px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 20px;
-  text-decoration: none;
+.column {
+  float: left;
+  width: 20%;
+  padding: 0 10px;
+  margin: 30px;
+  box-shadow: 0 30px 60px 0 red; 
+  padding-bottom: 100px;
+  text-align: center;
+  background-color: #f1f1f1;
+  
 }
 
-p:hover{
-  background-color: rgb(180, 44, 39);
-  font-weight: bold;
-  color: white;
+
+.row {
+  margin: 0 -5px;
+  display: flex;
 }
 
-a {
-  text-decoration: none;
-  color: black;
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
-a:hover {
-  color: white;
-  padding: 20px;
 
+
+
+/* Responsive columns - one column layout (vertical) on small screens */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
 }
+
+* {
+  box-sizing: border-box;
+}
+

@@ -22,4 +22,21 @@ router.get('/' , (req, res) => {
     })
 })
 
+router.post('/', (req, res) => {
+    const data = req.body   
+    data.name = req.body.name
+    data.instruction = req.body.instruction
+    db.addChore(data)
+    .then(() => {
+        res.json(data) //works fine but doesn't add text inputs 
+    })
+})
+
+router.delete('/:id', (req, res) => {
+    const id = req.params.id
+    db.deleteChore(id)
+    .then(() => {
+      res.json(id)}) // potential problem to address, debug with console logs
+  })
+
 module.exports = router
